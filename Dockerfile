@@ -16,6 +16,9 @@ COPY . .
 # Build the Next.js app for production
 RUN npm run build
 
+# npm run start
+RUN npm run start
+
 # Expose the port that the Next.js app will run on
 EXPOSE 8801
 
