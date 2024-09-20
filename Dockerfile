@@ -21,9 +21,10 @@ FROM nginx:1.25.1
 # Copy the custom nginx.conf file to the container
 COPY .docker/nginx.conf /etc/nginx/nginx.conf
 
-# Copy the built React app from the build stage to the nginx container
-COPY --from=build .next /usr/share/nginx/html
+# # Copy the built React app from the build stage to the nginx container
+# COPY --from=build .next /usr/share/nginx/html
 
+COPY . .
 
 # Expose port 80
 EXPOSE 80
