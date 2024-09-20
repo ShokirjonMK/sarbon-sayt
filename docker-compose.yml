@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   app:
     image: nextjs-app
@@ -13,6 +12,4 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     restart: always
-    depends_on:
-      - node_modules
     command: npm start
