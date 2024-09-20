@@ -13,7 +13,7 @@ const ApplySection = () => {
                     <div className='container xl:py-[120px] md:py-[90px] py-[64px] text-center  relative'>
                         <h1  className='xl:text-[48px] md:text-[40px] text-[32px] font-medium'>Zamonaviy kelajak sizning qo‘lingizda!</h1>
                         <p className='mb-[48px] mt-3 xl:text-2xl md:text-xl text-lg font-normal'>Bizning talabamiz bo‘lish imkoniyatini boy bermang!</p>
-                        <MainButton title='Ariza topshirish' className='mx-auto border-spacing-1 border-solid border-white border-[1px]' isArrow={true} onClick={() => window ? window.open('https://qabul.sarbonuniversity.uz', '_blank') : {}} />
+                        <MainButton title='Ariza topshirish' className='mx-auto border-spacing-1 border-solid border-white border-[1px]' isArrow={true} onClick={() => window ? window.open('https://qabul.sarbon.university', '_blank') : {}} />
                     </div>
                 </Fade>
             </div>
