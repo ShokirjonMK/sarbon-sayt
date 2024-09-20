@@ -1,21 +1,32 @@
-FROM node:12
+# Build stage
+FROM node:20 AS build
 
-ENV PORT 3000
+WORKDIR /app
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
 
-# Installing dependencies
-COPY package*.json /usr/src/app/
+# Install dependencies
 RUN npm install
 
-# Copying source files
-COPY . /usr/src/app
+# Copy the rest of the application code
+COPY . .
 
-# Building app
+# Build the React app
 RUN npm run build
-EXPOSE 3000
 
-# Running the app
-CMD "npm" "run" "dev"
+# Serve stage
+FROM nginx:1.25.1
+
+# Copy the custom nginx.conf file to the container
+COPY .docker/nginx.conf /etc/nginx/nginx.conf
+
+# Copy the built React app from the build stage to the nginx container
+COPY --from=build /app/dist /usr/share/nginx/html
+
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
