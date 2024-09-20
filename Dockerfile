@@ -19,5 +19,5 @@ RUN npm run build
 # Expose the port that the Next.js app will run on
 EXPOSE 8801
 
-# Start the Next.js app
-CMD ["npm", "start"]
+# Start the Next.js app and bind to 0.0.0.0
+CMD ["npm", "run", "start", "--", "-p", "8801", "-H", "0.0.0.0"]
