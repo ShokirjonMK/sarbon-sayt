@@ -2,15 +2,59 @@
 
 import useScrollTop from '@/hooks/useOnscrollTopHeight';
 import useWindowSize from '@/hooks/useWindowSize';
-import { Dropdown } from 'antd';
+import { Drawer, Dropdown, Menu } from 'antd';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
-import { newsMenus, tarkibiybolimnaMenus, univerMenus } from './header';
+import React, { useState } from 'react';
+import { tarkibiybolimnaMenus, univerMenus } from './header';
 import MainButton from './Buttons/mainBtn';
+import Image from 'next/image';
 import LogoLight from "@/assets/images/icon.svg";
-import menuIcon from "@/assets/images/icons/menu.svg";
+
+const menuData = [
+  {
+    key: '1',
+    label: <Link href="/" className='uppercase font-semibold text-[18px] flex items-center' >Asosiy</Link>,
+    link: "/",
+  },
+  {
+    key: '2',
+    label: <Link href="#" className='uppercase font-semibold text-[18px] flex items-center' >Universitet</Link>,
+    children: [
+      { key: '11', label: <Link href="/about" className='uppercase font-semibold text-[18px] flex items-center' >Universitet haqida</Link> },
+    ],
+  },
+  {
+    key: '3',
+    label: <Link href="#" className='uppercase font-semibold text-[18px] flex items-center' >Tarkibiy bolinma</Link>,
+    children: [
+      { key: '13', label: <Link href="/management" className='uppercase font-semibold text-[18px] flex items-center' >Rahbariyat</Link> },
+      { key: '14', label: <Link href="/departments" className='uppercase font-semibold text-[18px] flex items-center' >Bo'limlar</Link> },
+      { key: '15', label: <Link href="/kafedra" className='uppercase font-semibold text-[18px] flex items-center' >Kafedralar</Link> },
+    ],
+  },
+  {
+    key: '4',
+    label: <Link href="/news" className='uppercase font-semibold text-[18px] flex items-center' >Yangiliklar</Link>,
+  },
+  {
+    key: '5',
+    label: <Link href="/vacancy" className='uppercase font-semibold text-[18px] flex items-center' >Vakantlar</Link>,
+  },
+  {
+    key: '6',
+    label: <Link href="#" className='uppercase font-semibold text-[18px] flex items-center' >Qabul</Link>,
+    children: [
+      { key: '16', label: <Link href="/admission" className='uppercase font-semibold text-[18px] flex items-center' >Qabul 2024</Link> },
+    ],
+  },
+  {
+    key: '7',
+    label: <Link href="/contact" className='uppercase font-semibold text-[18px] flex items-center' >Bog'lanish</Link>,
+    link: "/contact",
+  },
+]
+
 
 const Headerv1: React.FC = (): JSX.Element => {
 
@@ -18,15 +62,17 @@ const Headerv1: React.FC = (): JSX.Element => {
   const top = useScrollTop();
   const t = useTranslations()
 
+  const [open, setOpen] = useState(false);
+
   return (
     <header
-      style={{background: "linear-gradient(345deg, rgba(1, 89, 101, 1) 0%, rgba(45, 66, 85, 1) 100%)"}}
-      className={`z-[3] text-[14px] ${top > 164 ? 'bg-primary/95 backdrop-blur-md' : ''} ${top > height - 300 ? 'fixed w-full' : 'sticky'} -top-[7.4rem]`}
+      style={{ background: "linear-gradient(345deg, rgba(1, 89, 101, 1) 0%, rgba(45, 66, 85, 1) 100%)" }}
+      className={`z-[3] text-[14px] ${top > 164 ? 'bg-primary/95 backdrop-blur-md' : ''} ${top > height - 300 ? 'fixed w-full' : 'sticky'} top-0 md:-top-[7.4rem]`}
     >
-      <div className="container mx-auto flex justify-between gap-4 py-8 border-b border-gray-100/30 text-white">
+      <div className="container mx-auto flex justify-between gap-4 py-4 md:py-8 md:border-b border-gray-100/30 text-white">
         <div className="flex gap-3">
           <Link href={"/"}>
-            <svg className="xl:w-[205px] md:w-[180px] w-[173px]" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            <svg className="xl:w-[205px] md:w-[180px] w-auto max-md:h-8" xmlns="http://www.w3.org/2000/svg" version="1.1"
               viewBox="0 0 1330.99 302.99"
             >
               <g id="Слой_x0020_1">
@@ -39,12 +85,18 @@ const Headerv1: React.FC = (): JSX.Element => {
             </svg>
           </Link>
 
-          <div className="border-r border-gray-100/30"></div>
+          <div className="hidden md:block border-r border-gray-100/30"></div>
 
           {/* <h1 className='text-xl uppercase leading-[45px]' >nimadir</h1> */}
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex items-center md:hidden">
+          <svg className="cursor-pointer size-7" onClick={() => setOpen(true)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+          </svg>
+        </div>
+
+        <div className="hidden md:flex gap-6">
           <div className="text-end">
             <p className='opacity-60' >Contact center</p>
             <h2 className="text-[20px] font-bold" ><a href="tel:+998718882288">+998 71 888 22 88</a></h2>
@@ -59,7 +111,7 @@ const Headerv1: React.FC = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="container mx-auto py-4 text-white sticky top-0 flex items-center justify-between gap-12">
+      <div className="container mx-auto py-4 text-white sticky top-0 hidden md:flex items-center justify-between gap-12">
         <div className="flex items-center gap-12">
           {
             top > 164 ? <svg className="h-8" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -90,7 +142,7 @@ const Headerv1: React.FC = (): JSX.Element => {
                 </svg>
               </Link>
             </Dropdown>
-            
+
             {/* <Link href={"/directions"} className={`uppercase font-semibold text-[18px]`}>
               {t("global.directions")}
             </Link> */}
@@ -150,97 +202,36 @@ const Headerv1: React.FC = (): JSX.Element => {
         </div> */}
       </div>
 
+      <Drawer
+        title={<div className='flex items-center justify-between '>
+          <div className="">
+            <Image src={LogoLight} alt="logo" className='h-8 w-max' />
+          </div>
 
-
-      {/* <div className="py-[12px]">
-        <div className="container-main mx-auto">
-          <div className="flex justify-between items-center">
-            <Link href={"/"}>
-              <Image
-                width="390"
-                height="144"
-                className={`xl:w-[195px] md:w-[150px] w-[130px] xl:h-[70px] md:h-[40px] h-[44.4px]`}
-                src={LogoLight}
-                alt="Sarbon univercity logo"
-              />
-            </Link>
-            <div
-              className={`max-md:hidden flex items-center xl:gap-[28px] gap-[20px] ${isTransparent
-                ? top < 100
-                  ? "text-white"
-                  : "text-black"
-                : "text-black"
-                }`}
-            >
-              <Dropdown menu={{ items: univerMenus }}>
-                <Link
-                  href={"#"}
-                  onClick={(e) => e.preventDefault()}
-                  className={`uppercase font-semibold text-[18px] flex items-center`}
-                >
-                  {t("global.university")}
-                  <svg className="ml-[7px] fill-red-500" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill={isTransparent ? top < 100 ? "white" : "black" : "black"} fillRule="evenodd" clipRule="evenodd" d="M6.33117 6.05243C6.14811 6.23549 5.85136 6.23549 5.6683 6.05243L0.889245 1.27337C0.706189 1.09031 0.706189 0.793556 0.889245 0.610494L1.11022 0.389494C1.29328 0.206432 1.59007 0.206432 1.77313 0.389494L5.99973 4.61612L10.2264 0.389494C10.4094 0.206432 10.7062 0.206432 10.8892 0.389494L11.1102 0.610494C11.2933 0.793556 11.2933 1.09031 11.1102 1.27337L6.33117 6.05243Z" />
-                  </svg>
-                </Link>
-              </Dropdown>
-              <Link href={"/directions"} className={`uppercase font-semibold text-[18px]`}>
-                {t("global.directions")}
-              </Link>
-              <Dropdown menu={{ items: tarkibiybolimnaMenus }}>
-                <Link
-                  href={"#"}
-                  onClick={(e) => e.preventDefault()}
-                  className={`uppercase font-semibold text-[18px] flex items-center`}
-                >
-                  {t("global.students")}
-                  <svg className="ml-[7px]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill={isTransparent ? top < 100 ? "white" : "black" : "black"} fillRule="evenodd" clipRule="evenodd" d="M6.33117 6.05243C6.14811 6.23549 5.85136 6.23549 5.6683 6.05243L0.889245 1.27337C0.706189 1.09031 0.706189 0.793556 0.889245 0.610494L1.11022 0.389494C1.29328 0.206432 1.59007 0.206432 1.77313 0.389494L5.99973 4.61612L10.2264 0.389494C10.4094 0.206432 10.7062 0.206432 10.8892 0.389494L11.1102 0.610494C11.2933 0.793556 11.2933 1.09031 11.1102 1.27337L6.33117 6.05243Z" />
-                  </svg>
-                </Link>
-              </Dropdown>
-              <Dropdown menu={{ items: newsMenus }}>
-                <Link
-                  href={"#"}
-                  onClick={(e) => e.preventDefault()}
-                  className={`uppercase font-semibold text-[18px] flex items-center`}
-                >
-                  {t("global.news")}
-                  <svg className="ml-[7px]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill={isTransparent ? top < 100 ? "white" : "black" : "black"} fillRule="evenodd" clipRule="evenodd" d="M6.33117 6.05243C6.14811 6.23549 5.85136 6.23549 5.6683 6.05243L0.889245 1.27337C0.706189 1.09031 0.706189 0.793556 0.889245 0.610494L1.11022 0.389494C1.29328 0.206432 1.59007 0.206432 1.77313 0.389494L5.99973 4.61612L10.2264 0.389494C10.4094 0.206432 10.7062 0.206432 10.8892 0.389494L11.1102 0.610494C11.2933 0.793556 11.2933 1.09031 11.1102 1.27337L6.33117 6.05243Z" />
-                  </svg>
-                </Link>
-              </Dropdown>
-              <Link href={"/contact"} className={`uppercase font-semibold text-[18px]`}>
-                {t("global.contact")}
-              </Link>
-              <MainButton
-                title={t("global.acceptance")}
-                type={isTransparent ? (top < 100 ? "light" : "main") : "main"}
-                onClick={() => window ? window.open('https://qabul.sarbonuniversity.uz', '_blank') : {}}
-              />
-            </div>
-            <svg
-              className="md:hidden cursor-pointer"
-              width="20"
-              height="12"
-              viewBox="0 0 20 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1.09091H19M1 6H19M1 10.9091H19"
-                stroke={
-                  isTransparent ? (top < 100 ? "white" : "black") : "black"
-                }
-                strokeWidth="1.63636"
-                strokeMiterlimit="10"
-                strokeLinecap="round"
-              />
+          <div className="">
+            <svg className="cursor-pointer size-6" onClick={() => setOpen(false)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </div>
-        </div>
-      </div> */}
+        </div>}
+        width={width} onClose={() => setOpen(false)}
+        open={open}
+        placement='left'
+        closeIcon={null}
+      >
+
+        <Menu
+          mode="inline"
+          className='w-full'
+          defaultSelectedKeys={['231']}
+          // openKeys={stateOpenKeys}
+          // onOpenChange={onOpenChange}
+          style={{ border: "none" }}
+          items={menuData}
+        />
+
+      </Drawer>
+
     </header >
   );
 };
