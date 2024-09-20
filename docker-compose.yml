@@ -1,0 +1,15 @@
+services:
+  app:
+    image: nextjs-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "8801:8801"  # Map host port 8801 to container port 8801
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: always
+    command: npm start
