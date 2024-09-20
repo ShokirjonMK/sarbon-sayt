@@ -258,7 +258,7 @@ const Header = ({
               <MainButton
                 title={t("global.acceptance")}
                 type={isTransparent ? (top < 100 ? "light" : "main") : "main"}
-                onClick={() => window ? window.open('https://qabul.sarbonuniversity.uz', '_blank') : {}}
+                onClick={() => window ? window.open('https://qabul.sarbon.university', '_blank') : {}}
               />
             </div>
             <svg

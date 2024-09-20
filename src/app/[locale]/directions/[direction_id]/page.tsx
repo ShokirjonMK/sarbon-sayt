@@ -48,7 +48,7 @@ export default function DirectionsView() {
                 {/* <p className="text-sm mb-2"><span className="font-medium">Kechki:</span> {data?.prices?.kechki}</p> */}
                 <p className="text-sm"><span className="font-medium">Sirtqi:</span> {data?.prices?.sirtqi}</p>
               </div>
-              <MainButton title="hUJJAT TOPSHIRISH" isArrow={true} type="main" className="rounded-lg w-full" onClick={() => window ? window.open('https://qabul.sarbonuniversity.uz', '_blank') : {}} />
+              <MainButton title="hUJJAT TOPSHIRISH" isArrow={true} type="main" className="rounded-lg w-full" onClick={() => window ? window.open('https://qabul.sarbon.university', '_blank') : {}} />
             </div>
           </div>
         </div>

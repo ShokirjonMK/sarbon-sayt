@@ -105,7 +105,7 @@ const Headerv1: React.FC = (): JSX.Element => {
             title={t("global.acceptance")}
             type={"light"}
             isArrow
-            onClick={() => window ? window.open('https://qabul.sarbonuniversity.uz', '_blank') : {}}
+            onClick={() => window ? window.open('https://qabul.sarbon.university', '_blank') : {}}
             className='border border-transparent hover:border-white px-12'
           />
         </div>
