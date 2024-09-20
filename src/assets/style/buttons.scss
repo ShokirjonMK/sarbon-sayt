@@ -1,0 +1,30 @@
+
+.hero-btn svg{
+    fill: white;
+}
+.a:hover{
+    color: #2D4255;
+}
+.hero-btn:hover svg{
+    fill: #2D4255;
+}
+
+.sarbon-main-button svg{
+    transition: 0.2s;
+}
+
+.sarbon-main-button:hover{
+    // letter-spacing: 1px;
+    fill: #2D4255;
+}
+.sarbon-main-button:hover svg{
+    transform: translate(3px, 0);
+}
+
+.sarbon-main-button-light path{
+    transition: 0.2s;
+}
+
+.sarbon-main-button-light:hover path{
+    fill: #fff;
+}

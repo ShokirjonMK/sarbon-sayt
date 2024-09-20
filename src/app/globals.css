@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+*{
+  font-family: "Inter" sans-serif;
+}
+
+.main-section{
+  height: calc(100vh - 48px);
+  background: url(../assets/images/main-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-card-hover{
+  transition: 200ms;
+  overflow: hidden;
+}
+
+.main-card-hover img{
+  transition: 600ms;
+}
+
+.main-card-hover:hover{
+  /* background: #cdcdcd; */
+  /* transform: translate(0, -10px); */
+}
+
+.main-card-hover:hover img{
+  transform: scale(1.1)
+}
+.main-card-hover:hover .card-title{
+  color: #2D4255;
+}
+
+.faq-collapse:hover span{
+  color: #2D4255;
+}
+
+.news-media-icon-avatar svg{
+  transition: 0.1s;
+}
+.news-media-icon-avatar:hover svg{
+  rotate: 25deg;
+  transform: scale(1.1);
+}
+
+.qabul-btn:hover path{
+  fill: rgb(255, 255, 255);
+}
+
+.about-menu-button svg{
+  opacity: 0;
+  transition: 0.2s;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.about-menu-button:hover svg{
+  opacity: 1;
+  display: inline-block;
+  margin-right: 0;
+  /* transform: translate(50px, 0); */
+  /* transform: rotate(-90deg); */
+}
+
+.slider-next-prev-btn:hover path{
+    fill: #2D4255;
+}
+.slider-next-prev-btn:hover rect{
+  stroke: #2D4255;
+}
+
+.container-main, .container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+}
+@media (min-width: 640px) {
+  .container-main, .container {
+      max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container-main, .container {
+      max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-main, .container {
+      max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container-main, .container {
+      max-width: 1280px;
+  }
+}
+@media (min-width: 1436px) {
+  .container-main {
+      max-width: 1436px;
+  }
+}
+
+@media (min-width: 1836px) {
+  .container-main {
+      max-width: 1836px;
+  }
+}
+
+
+.container-left {
+  margin-left: auto;
+  width: 95%;
+}
+@media (min-width: 640px) {
+  .container-left {
+      max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container-left {
+      max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-left {
+      max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container-left {
+      max-width: 1280px;
+  }
+}
+@media (min-width: 1436px) {
+  .container-left {
+      max-width: 1436px;
+  }
+}
+
+@media (min-width: 1836px) {
+  .container-left {
+      max-width: 1836px;
+  }
+}
+
+
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%); /* Matn o'ngdan kiradi */
+  }
+  100% {
+    transform: translateX(-100%); /* Matn chapga chiqib ketadi */
+  }
+}
+
+.scrolling-text-wrapper:hover .scrolling-text{
+  animation-play-state: paused;
+}
+
+.scrolling-text {
+  animation: scroll linear infinite; /* 10 soniyada bir marta to'liq aylanish */
+  animation-duration: 350s;
+  
+}
+
+.scrolling-text-duration{
+  animation-duration: 350s;
+}
+
+.partners-duration{
+  animation-duration: 120s;
+}
