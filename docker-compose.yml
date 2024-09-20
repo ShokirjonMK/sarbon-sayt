@@ -1,6 +1,6 @@
 services:
-  nextjs-app:
-    container_name: nextjs-app
+  nextjs:
+    container_name: ${DOCKER_PROJECT_NAME}_nextjs
     build:
       context: .
       dockerfile: ./docker/nextjs/Dockerfile
