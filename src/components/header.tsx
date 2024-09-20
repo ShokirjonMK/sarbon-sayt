@@ -21,78 +21,78 @@ export const univerMenus: MenuProps["items"] = [
     ),
     style: { padding: '12px 16px' }
   },
-  {
-    key: "3",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        Rektor murojaati
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "4",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        Rahbariyat
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "5",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        Bo‘limlar va xodimlar
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "6",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        tashkiliy tuzilma
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "7",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        Normativ hujjatlar
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "8",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        Hamkorlar
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "9",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        bo‘sh ish o‘rinlari
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "10",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        Savol-javoblar
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
+  // {
+  //   key: "3",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       Rektor murojaati
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
+  // {
+  //   key: "4",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       Rahbariyat
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
+  // {
+  //   key: "5",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       Bo‘limlar va xodimlar
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
+  // {
+  //   key: "6",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       tashkiliy tuzilma
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
+  // {
+  //   key: "7",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       Normativ hujjatlar
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
+  // {
+  //   key: "8",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       Hamkorlar
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
+  // {
+  //   key: "9",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       bo‘sh ish o‘rinlari
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
+  // {
+  //   key: "10",
+  //   label: (
+  //     <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
+  //       Savol-javoblar
+  //     </Link>
+  //   ),
+  //   style: { padding: '12px 16px' }
+  // },
 ];
 
 export const newsMenus: MenuProps["items"] = [
@@ -134,12 +134,12 @@ export const newsMenus: MenuProps["items"] = [
   }
 ];
 
-export const studentsMenus: MenuProps["items"] = [
+export const tarkibiybolimnaMenus: MenuProps["items"] = [
   {
     key: "1",
     label: (
       <Link className="uppercase text-sm leading-[1.7] font-normal" href="#">
-        Elektron kutubxona
+        Rahbariyat
       </Link>
     ),
     style: { padding: '12px 16px' }
@@ -148,7 +148,7 @@ export const studentsMenus: MenuProps["items"] = [
     key: "2",
     label: (
       <Link className="uppercase text-sm leading-[1.7] font-normal" href="#">
-        Dars jadvali
+        Bo'limlar
       </Link>
     ),
     style: { padding: '12px 16px' }
@@ -157,25 +157,7 @@ export const studentsMenus: MenuProps["items"] = [
     key: "3",
     label: (
       <Link className="uppercase text-sm leading-[1.7] font-normal" href="#">
-        HEMIS Student
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "4",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/acceptance">
-        GRANTLAR
-      </Link>
-    ),
-    style: { padding: '12px 16px' }
-  },
-  {
-    key: "5",
-    label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="#">
-        Talabalar hayoti
+        Kafedralar
       </Link>
     ),
     style: { padding: '12px 16px' }
@@ -246,7 +228,7 @@ const Header = ({
               <Link href={"/directions"} className={`uppercase font-medium`}>
                 {t("global.directionsasd")}
               </Link>
-              <Dropdown menu={{ items: studentsMenus }}>
+              <Dropdown menu={{ items: tarkibiybolimnaMenus }}>
                 <Link
                   href={"#"}
                   onClick={(e) => e.preventDefault()}

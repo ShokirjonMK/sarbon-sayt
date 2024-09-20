@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { newsMenus, studentsMenus, univerMenus } from './header';
+import { newsMenus, tarkibiybolimnaMenus, univerMenus } from './header';
 import MainButton from './Buttons/mainBtn';
 import LogoLight from "@/assets/images/icon.svg";
 import menuIcon from "@/assets/images/icons/menu.svg";
@@ -20,12 +20,13 @@ const Headerv1: React.FC = (): JSX.Element => {
 
   return (
     <header
-      className={` z-[2] text-[14px] ${top > 164 ? 'bg-primary/95 backdrop-blur-md' : 'bg-primary'} ${top > height - 300 ? 'fixed w-full' : 'sticky'} -top-[7.4rem]`}
+      style={{background: "linear-gradient(345deg, rgba(1, 89, 101, 1) 0%, rgba(45, 66, 85, 1) 100%)"}}
+      className={`z-[3] text-[14px] ${top > 164 ? 'bg-primary/95 backdrop-blur-md' : ''} ${top > height - 300 ? 'fixed w-full' : 'sticky'} -top-[7.4rem]`}
     >
       <div className="container mx-auto flex justify-between gap-4 py-8 border-b border-gray-100/30 text-white">
         <div className="flex gap-3">
           <Link href={"/"}>
-            <svg className="xl:w-[195px] md:w-[180px] w-[173px]" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            <svg className="xl:w-[205px] md:w-[180px] w-[173px]" xmlns="http://www.w3.org/2000/svg" version="1.1"
               viewBox="0 0 1330.99 302.99"
             >
               <g id="Слой_x0020_1">
@@ -46,7 +47,7 @@ const Headerv1: React.FC = (): JSX.Element => {
         <div className="flex gap-6">
           <div className="text-end">
             <p className='opacity-60' >Contact center</p>
-            <h2 className="text-[20px] font-bold" ><a href="tel:+998 71 200 00 00">+998 71 200 00 00</a></h2>
+            <h2 className="text-[20px] font-bold" ><a href="tel:+998718882288">+998 71 888 22 88</a></h2>
           </div>
           <MainButton
             title={t("global.acceptance")}
@@ -81,7 +82,7 @@ const Headerv1: React.FC = (): JSX.Element => {
               <Link
                 href={"#"}
                 onClick={(e) => e.preventDefault()}
-                className={`uppercase font-medium flex items-center`}
+                className={`uppercase font-semibold text-[18px] flex items-center`}
               >
                 {t("global.university")}
                 <svg className="ml-[7px] fill-red-500" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,45 +90,64 @@ const Headerv1: React.FC = (): JSX.Element => {
                 </svg>
               </Link>
             </Dropdown>
-            <Link href={"/directions"} className={`uppercase font-medium`}>
+            
+            {/* <Link href={"/directions"} className={`uppercase font-semibold text-[18px]`}>
               {t("global.directions")}
-            </Link>
-            <Dropdown menu={{ items: studentsMenus }}>
+            </Link> */}
+            <Dropdown menu={{ items: tarkibiybolimnaMenus }}>
               <Link
                 href={"#"}
                 onClick={(e) => e.preventDefault()}
-                className={`uppercase font-medium flex items-center`}
+                className={`uppercase font-semibold text-[18px] flex items-center`}
               >
-                {t("global.students")}
+                {t("Tarkibiy bo'linma")}
                 <svg className="ml-[7px]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill={"white"} fillRule="evenodd" clipRule="evenodd" d="M6.33117 6.05243C6.14811 6.23549 5.85136 6.23549 5.6683 6.05243L0.889245 1.27337C0.706189 1.09031 0.706189 0.793556 0.889245 0.610494L1.11022 0.389494C1.29328 0.206432 1.59007 0.206432 1.77313 0.389494L5.99973 4.61612L10.2264 0.389494C10.4094 0.206432 10.7062 0.206432 10.8892 0.389494L11.1102 0.610494C11.2933 0.793556 11.2933 1.09031 11.1102 1.27337L6.33117 6.05243Z" />
                 </svg>
               </Link>
             </Dropdown>
-            <Dropdown menu={{ items: newsMenus }}>
+            <Link href={"/news"} className={`uppercase font-semibold text-[18px]`}>
+              {t("global.news")}
+            </Link>
+            <Link href={"/news"} className={`uppercase font-semibold text-[18px]`}>
+              {t("Vakansiyalar")}
+            </Link>
+            {/* <Dropdown menu={{ items: newsMenus }}>
               <Link
                 href={"#"}
                 onClick={(e) => e.preventDefault()}
-                className={`uppercase font-medium flex items-center`}
+                className={`uppercase font-semibold text-[18px] flex items-center`}
               >
                 {t("global.news")}
                 <svg className="ml-[7px]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill={"white"} fillRule="evenodd" clipRule="evenodd" d="M6.33117 6.05243C6.14811 6.23549 5.85136 6.23549 5.6683 6.05243L0.889245 1.27337C0.706189 1.09031 0.706189 0.793556 0.889245 0.610494L1.11022 0.389494C1.29328 0.206432 1.59007 0.206432 1.77313 0.389494L5.99973 4.61612L10.2264 0.389494C10.4094 0.206432 10.7062 0.206432 10.8892 0.389494L11.1102 0.610494C11.2933 0.793556 11.2933 1.09031 11.1102 1.27337L6.33117 6.05243Z" />
                 </svg>
               </Link>
-            </Dropdown>
-            <Link href={"/acceptance"} className={`uppercase font-medium`}>
+            </Dropdown> */}
+            {/* <Link href={"/acceptance"} className={`uppercase font-semibold text-[18px]`}>
               {t("global.acceptance")}
-            </Link>
-            <Link href={"/contact"} className={`uppercase font-medium`}>
+            </Link> */}
+            <Dropdown menu={{ items: univerMenus }}>
+              <Link
+                href={"#"}
+                onClick={(e) => e.preventDefault()}
+                className={`uppercase font-semibold text-[18px] flex items-center`}
+              >
+                {t("global.acceptance")}
+                <svg className="ml-[7px] fill-red-500" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill={"white"} fillRule="evenodd" clipRule="evenodd" d="M6.33117 6.05243C6.14811 6.23549 5.85136 6.23549 5.6683 6.05243L0.889245 1.27337C0.706189 1.09031 0.706189 0.793556 0.889245 0.610494L1.11022 0.389494C1.29328 0.206432 1.59007 0.206432 1.77313 0.389494L5.99973 4.61612L10.2264 0.389494C10.4094 0.206432 10.7062 0.206432 10.8892 0.389494L11.1102 0.610494C11.2933 0.793556 11.2933 1.09031 11.1102 1.27337L6.33117 6.05243Z" />
+                </svg>
+              </Link>
+            </Dropdown>
+            <Link href={"/contact"} className={`uppercase font-semibold text-[18px]`}>
               {t("global.contact")}
             </Link>
           </div>
         </div>
 
-        <div className="">
-          <svg className='opacity-50 hover:opacity-100 transition-colors cursor-pointer' data-v-7b88864e="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path data-v-7b88864e="" d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </div>
+        {/* <div className="">
+          <svg className='opacity-50 hover:opacity-100 transition-colors cursor-pointer' data-v-7b88864e="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path data-v-7b88864e="" d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="white" stroke-Width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+        </div> */}
       </div>
 
 
@@ -156,7 +176,7 @@ const Headerv1: React.FC = (): JSX.Element => {
                 <Link
                   href={"#"}
                   onClick={(e) => e.preventDefault()}
-                  className={`uppercase font-medium flex items-center`}
+                  className={`uppercase font-semibold text-[18px] flex items-center`}
                 >
                   {t("global.university")}
                   <svg className="ml-[7px] fill-red-500" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,14 +184,14 @@ const Headerv1: React.FC = (): JSX.Element => {
                   </svg>
                 </Link>
               </Dropdown>
-              <Link href={"/directions"} className={`uppercase font-medium`}>
+              <Link href={"/directions"} className={`uppercase font-semibold text-[18px]`}>
                 {t("global.directions")}
               </Link>
-              <Dropdown menu={{ items: studentsMenus }}>
+              <Dropdown menu={{ items: tarkibiybolimnaMenus }}>
                 <Link
                   href={"#"}
                   onClick={(e) => e.preventDefault()}
-                  className={`uppercase font-medium flex items-center`}
+                  className={`uppercase font-semibold text-[18px] flex items-center`}
                 >
                   {t("global.students")}
                   <svg className="ml-[7px]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +203,7 @@ const Headerv1: React.FC = (): JSX.Element => {
                 <Link
                   href={"#"}
                   onClick={(e) => e.preventDefault()}
-                  className={`uppercase font-medium flex items-center`}
+                  className={`uppercase font-semibold text-[18px] flex items-center`}
                 >
                   {t("global.news")}
                   <svg className="ml-[7px]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +211,7 @@ const Headerv1: React.FC = (): JSX.Element => {
                   </svg>
                 </Link>
               </Dropdown>
-              <Link href={"/contact"} className={`uppercase font-medium`}>
+              <Link href={"/contact"} className={`uppercase font-semibold text-[18px]`}>
                 {t("global.contact")}
               </Link>
               <MainButton

@@ -18,6 +18,7 @@ import SEO from "../../../next-seo.config";
 import { Lenta } from "@/components/Lenta";
 import Headerv1 from "@/components/Headerv1";
 import Faculties from "@/components/faculties";
+import MainSectionV1 from "@/components/mainSectionV1";
 
 export default function IndexPage() {
 
@@ -65,9 +66,9 @@ export default function IndexPage() {
           }
         /> */}
         <Headerv1 />
-        <MainSection />
+        <MainSectionV1 />
       </div>
-      <div className="-translate-y-20 -rotate-2">
+      <div className="-translate-y-20 -rotate-2 relative z-[2]">
         <Lenta />
       </div>
       {/* <ReactorsAppeal /> */}

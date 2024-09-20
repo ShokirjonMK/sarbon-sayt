@@ -52,7 +52,7 @@ const Footer = () => {
                         </div>
                         <div className="mb-6">
                             <p className="mb-1 text-base font-normal" >Aloqa:</p>
-                            <a href="tel:+998555000250" className='text-sm opacity-80 my-1 block'>+998 55 500-02-50</a>
+                            <a href="tel:+998718882288" className='text-sm opacity-80 my-1 block'>+998 71 888 22 88</a>
                             <a href="mailto:info@sarbonuniversity.uz" className='text-sm opacity-80'>info@sarbonuniversity.uz</a>
                         </div>
                         <div className="flex items-center gap-[12px]">

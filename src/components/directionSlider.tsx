@@ -3,6 +3,7 @@ import DirectionSliderCard from './Cards/directionSliderCard';
 import { useEffect, useRef, useState } from 'react';
 import useWindowSize from '@/hooks/useWindowSize';
 import { directions } from '@/datas/directions';
+import { MainTitle } from './mainTitle';
 
 const DirectionSlider = () => {
 
@@ -24,7 +25,7 @@ const DirectionSlider = () => {
         <div className='bg-secondBg'>
             <div  className="xl:py-[120px] md:py-[90px] py-[64px]">
                 <div ref={divref} className="container">
-                    <h1 className='xl:text-[50px] md:text-[48px] text-[32px] font-semibold uppercase'>Ta'lim yo'nalishlari</h1>
+                    <MainTitle>Ta'lim yo'nalishlari</MainTitle>
                     <div className="flex justify-between">
                         <p className='mt-4 text-[rgba(51,51,51,0.8)] xl:text-xl text-lg md:w-2/3'>Bakalavriat bosqichida olgan bilim va ko‘nikmalaringiz sizni tanlagan sohangizda karyera qilish yoki ilmiy faoliyatni davom ettirish imkonini beradi.</p>
                         <div className='max-md:hidden flex items-end gap-4'>

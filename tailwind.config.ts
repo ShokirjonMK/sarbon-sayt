@@ -15,10 +15,10 @@ const config: Config = {
       },
       colors:{
         // primary: "#007A5E",
-        primary: "#272945",
-        // primary: "#2D4255",
+        // primary: "#272945",
+        primary: "#015965",
         secondPrimary: "#6E0F27",
-        primaryHover: "#213140",
+        primaryHover: "#00414a",
         secondBg: "#f4f4f4"
       }
     },

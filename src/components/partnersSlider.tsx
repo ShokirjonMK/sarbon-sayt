@@ -6,6 +6,7 @@ import part4 from '@/assets/images/partners/part-8.svg'
 import Image from 'next/image';
 import useWindowSize from '@/hooks/useWindowSize';
 import { Autoplay } from 'swiper/modules';
+import { MainTitle } from './mainTitle';
 
 const PartnersSlider = () => {
 
@@ -118,7 +119,7 @@ const PartnersSlider = () => {
     return (
         <div className='bg-white xl:py-[120px] md:py-[90px] py-[64px]'>
             <div className="container mx-auto ">
-                <h1 className='xl:text-[50px] md:text-[48px] text-[32px] font-semibold uppercase xl:mb-[72px] md:mb-[52px] mb-[32px]'>Hamkorlarimiz</h1>
+                <MainTitle className='xl:mb-[72px] md:mb-[52px] mb-[32px]'>Hamkorlarimiz</MainTitle>
             </div>
 
             <div className="overflow-hidden w-full scrolling-text-wrapper">    

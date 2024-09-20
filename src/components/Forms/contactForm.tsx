@@ -65,10 +65,10 @@ const ContactForm = () => {
             Telefon:
           </p>
           <a
-            href="tel:+998555000250"
+            href="tel:+998718882288"
             className="md:text-[32px] text-[24px] font-medium leading-[1.2] my-1 hover:text-secondPrimary transition-all"
           >
-            +998 55 500-02-50
+            +998 71 888 22 88
           </a>
           <p className="text-[rgba(51,51,51,0.8)] font-normal text-base">
             HOZIROQ QO‘NG‘IROQ QILING!
