@@ -8,7 +8,7 @@ services:
     environment:
       - NODE_ENV=production
     ports:
-      - "3000:3000"
+      - "8801:8801"  # Map host port 8801 to container port 8801
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
