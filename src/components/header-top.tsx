@@ -2,12 +2,21 @@
 
 import Link from "next/link";
 import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
+import { useTranslations } from "next-intl";
 
 const HeaderTop = () => {
 
+    const t = useTranslations();
+
     return (
         <header className="max-md:hidden right-0 left-0 top-0 z-[2]">
-            <div className="bg-primary/90 py-[8px] xl:text-[14px] text-[12px] text-[rgba(255,255,255,0.8)]" style={{ boxShadow: "0 3px 24px rgba(0,0,0,.08)" }}>
+            <div className="bg-yellow-100 py-1 flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5 text-yellow-700">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                </svg>
+                <p className="text-sm font-bold text-yellow-700 ml-2">{t("header.testontest")}</p>
+            </div>
+            <div className="bg-secondPrimary/90 py-[8px] xl:text-[14px] text-[12px] text-[rgba(255,255,255,0.8)]" style={{ boxShadow: "0 3px 24px rgba(0,0,0,.08)" }}>
                 <div className="container mx-auto">
                     <div className="flex justify-between items-center">
                         <div className="flex xl:gap-[20px] gap-[15px]">

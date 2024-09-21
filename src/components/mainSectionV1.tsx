@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react"
-import useWindowSize from "@/hooks/useWindowSize"
 import MainButton from "./Buttons/mainBtn"
 import { Fade } from "react-awesome-reveal"
 import { useTranslations } from "next-intl"
@@ -14,25 +13,25 @@ import 'swiper/css/effect-fade';
 import { EffectFade, Autoplay } from 'swiper/modules';
 import Image from "next/image"
 
-const slidesData = [
+const slidesData: Array<{title: string, description: string, img: any}> = [
     {
-      title: "Sarbon universitetida innovatsion yondashuvlar",
-      description: "Biz o‘z talabalarmizga zamonaviy bilim va ko‘nikmalarni taqdim etib, ularni global miqyosda muvaffaqiyatga erishishga tayyorlaymiz.",
+      title: "Kelajakni bugundan qur!",
+      description: "Sarbon Universitetida bilim sari qadam qo'ying.",
       img: img1
     },
     {
-      title: "2024-2025 o‘quv yili uchun qabul boshlandi",
-      description: "Bilim bilan qurollangan, tanqidiy fikrlaydigan va jamiyatga ijobiy ta‘sir ko‘rsatadigan kadrlarni tarbiyalash bizning vazifamizdir.",
+      title: "Innovatsiya va muvaffaqiyat sari birgalikda!",
+      description: "Yangi avlod yetakchilari uchun bilim manbai.",
       img: img2
     },
     {
-      title: "Talaba bo‘lishni xohlaysizmi?",
-      description: "Kelajak poydevorini qurishni hozirdan boshlang",
+      title: "Sizning orzularingizning manzili!",
+      description: "Sarbon Universiteti: Karyerangizni shu yerda boshlang.",
       img: img3
     },
     {
-        title: "Yangi avlod yetakchilarini tayyorlaymiz",
-        description: "O‘qitish jarayonimizda yangilik va sifatni ustuvor qilib, yetakchilik qobiliyatlari va tanqidiy tafakkur egalarini tarbiyalashga qaratilgan.",
+        title: "Global bilim, milliy qadriyatlar!",
+        description: "Zamonaviy ta'lim, an'anaviy qadriyatlar bilan uyg'unlikda.",
         img: img4
       }
 ];
@@ -40,10 +39,7 @@ const slidesData = [
 const MainSectionV1 = () => {
 
     const t = useTranslations();
-    const [currentText, setCurrentText] = useState({
-        title: "SARBON UNIVERSITETI",
-        description: "Birinchi slayd matni"
-    });
+    const [currentText, setCurrentText] = useState<{title: string, description: string}>({title: slidesData[0]?.title, description: slidesData[0]?.description});
     
     const progressCircle = useRef<any>(null);
     const progressContent = useRef<any>(null);
@@ -60,7 +56,7 @@ const MainSectionV1 = () => {
         const slide = slidesData[currentIndex];
         setCurrentText({
           title: slide?.title,
-          description: slide?.description
+          description: slide?.description,
         });
       };
     
@@ -69,7 +65,7 @@ const MainSectionV1 = () => {
     return ( 
             <>
                 <div className="text-white">
-                    <div className="grid max-lg:grid-cols-1 grid-cols-2 h-[calc(100vh-228px)]">
+                    <div className="grid max-lg:grid-cols-1 grid-cols-2 h-[calc(100vh-256px)]">
                         <div className="h-full bg-main-img bg-no-repeat">
                             <div className="h-full bg-primary/80 w-full flex items-center sm:px-24 px-6 max-sm:text-center">
                                 <div>

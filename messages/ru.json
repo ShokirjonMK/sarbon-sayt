@@ -12,5 +12,8 @@
         "contact": "Bog‘lanish",
         "acceptance": "Qabul",
         "students": "Talabalar"
+    },
+    "header": {
+        "testontest": "Cайт работает в тестовом режиме"
     }
 }
