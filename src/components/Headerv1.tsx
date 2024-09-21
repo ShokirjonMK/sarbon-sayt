@@ -21,7 +21,7 @@ const menuData = [
     key: '2',
     label: <Link href="#" className='uppercase font-semibold text-[18px] flex items-center' >Universitet</Link>,
     children: [
-      { key: '11', label: <Link href="/about" className='uppercase font-semibold text-[18px] flex items-center' >Universitet haqida</Link> },
+      { key: '11', label: <Link href="/#" className='uppercase font-semibold text-[18px] flex items-center' >Universitet haqida</Link> },
     ],
   },
   {
@@ -35,7 +35,7 @@ const menuData = [
   },
   {
     key: '4',
-    label: <Link href="/news" className='uppercase font-semibold text-[18px] flex items-center' >Yangiliklar</Link>,
+    label: <Link href="/#" className='uppercase font-semibold text-[18px] flex items-center' >Yangiliklar</Link>,
   },
   {
     key: '5',
@@ -91,8 +91,8 @@ const Headerv1: React.FC = (): JSX.Element => {
         </div>
 
         <div className="flex items-center md:hidden">
-          <svg className="cursor-pointer size-7" onClick={() => setOpen(true)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+          <svg className="cursor-pointer size-7" onClick={() => setOpen(true)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
           </svg>
         </div>
 
@@ -152,17 +152,17 @@ const Headerv1: React.FC = (): JSX.Element => {
                 onClick={(e) => e.preventDefault()}
                 className={`uppercase font-semibold text-[18px] flex items-center`}
               >
-                {t("Tarkibiy bo'linma")}
+                Tarkibiy bo'linma
                 <svg className="ml-[7px]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill={"white"} fillRule="evenodd" clipRule="evenodd" d="M6.33117 6.05243C6.14811 6.23549 5.85136 6.23549 5.6683 6.05243L0.889245 1.27337C0.706189 1.09031 0.706189 0.793556 0.889245 0.610494L1.11022 0.389494C1.29328 0.206432 1.59007 0.206432 1.77313 0.389494L5.99973 4.61612L10.2264 0.389494C10.4094 0.206432 10.7062 0.206432 10.8892 0.389494L11.1102 0.610494C11.2933 0.793556 11.2933 1.09031 11.1102 1.27337L6.33117 6.05243Z" />
                 </svg>
               </Link>
             </Dropdown>
-            <Link href={"/news"} className={`uppercase font-semibold text-[18px]`}>
+            <Link href={"/#"} className={`uppercase font-semibold text-[18px]`}>
               {t("global.news")}
             </Link>
-            <Link href={"/news"} className={`uppercase font-semibold text-[18px]`}>
-              {t("Vakansiyalar")}
+            <Link href={"/#"} className={`uppercase font-semibold text-[18px]`}>
+            Vakansiyalar
             </Link>
             {/* <Dropdown menu={{ items: newsMenus }}>
               <Link
@@ -198,7 +198,7 @@ const Headerv1: React.FC = (): JSX.Element => {
         </div>
 
         {/* <div className="">
-          <svg className='opacity-50 hover:opacity-100 transition-colors cursor-pointer' data-v-7b88864e="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path data-v-7b88864e="" d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="white" stroke-Width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+          <svg className='opacity-50 hover:opacity-100 transition-colors cursor-pointer' data-v-7b88864e="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path data-v-7b88864e="" d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
         </div> */}
       </div>
 
@@ -209,8 +209,8 @@ const Headerv1: React.FC = (): JSX.Element => {
           </div>
 
           <div className="">
-            <svg className="cursor-pointer size-6" onClick={() => setOpen(false)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            <svg className="cursor-pointer size-6" onClick={() => setOpen(false)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </div>
         </div>}

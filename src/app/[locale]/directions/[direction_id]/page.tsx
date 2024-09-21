@@ -54,8 +54,8 @@ export default function DirectionsView() {
         </div>
 
       </div>
-      <ApplySection />
-      <FAQSection />
+      {/* <ApplySection />
+      <FAQSection /> */}
     </div>
   )
 }

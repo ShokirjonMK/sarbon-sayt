@@ -61,12 +61,12 @@ const ContactForm = () => {
       <div className="md:col-span-1 col-span-0"></div>
       <div className="md:col-span-6 col-span-12 max-md:mt-[48px]">
         <div>
-          <p className="text-secondPrimary md:text-xl text-lg font-normal">
+          <p className="text-secondPrimary md:text-xl text-lg font-semibold">
             Telefon:
           </p>
           <a
             href="tel:+998718882288"
-            className="md:text-[32px] text-[24px] font-medium leading-[1.2] my-1 hover:text-secondPrimary transition-all"
+            className="md:text-[32px] text-[24px] font-bold leading-[1.2] my-1 hover:text-secondPrimary transition-all"
           >
             +998 71 888 22 88
           </a>
@@ -75,19 +75,19 @@ const ContactForm = () => {
           </p>
         </div>
         <div className="my-8">
-          <p className="text-secondPrimary md:text-xl text-lg font-normal">Email:</p>
+          <p className="text-secondPrimary md:text-xl text-lg font-semibold">Email:</p>
           <a
             href="mailto:info@sarbonuniversity.uz"
-            className="text-base font-normal leading-[1.4] mt-1 hover:text-secondPrimary transition-all"
+            className="text-base font-bold leading-[1.4] mt-1 hover:text-secondPrimary transition-all"
           >
             info@sarbonuniversity.uz
           </a>
         </div>
         <div className="my-8">
-          <p className="text-secondPrimary md:text-xl text-lg font-normal">Manzil:</p>
+          <p className="text-secondPrimary md:text-xl text-lg font-semibold">Manzil:</p>
           <a
             href="#"
-            className="text-base font-normal leading-[1.4] mt-1 hover:text-secondPrimary transition-all"
+            className="text-base font-semibold leading-[1.4] mt-1 hover:text-secondPrimary transition-all"
           >
             Toshkent shahri, Olmazor tumani, Sag'bon ko`chasi 2B-uy
           </a>

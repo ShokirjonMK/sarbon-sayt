@@ -15,8 +15,9 @@ export const univerMenus: MenuProps["items"] = [
   {
     key: "1",
     label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about">
-        universitet haqida
+      <Link className="uppercase text-sm leading-[1.7] font-normal" href="https://qabul.sarbon.university" target="_blank">
+      {/* <Link className="uppercase text-sm leading-[1.7] font-normal" href="/about"> */}
+        Qabul 2024
       </Link>
     ),
     style: { padding: '12px 16px' }
@@ -99,7 +100,8 @@ export const newsMenus: MenuProps["items"] = [
   {
     key: "1",
     label: (
-      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/news">
+      <Link className="uppercase text-sm leading-[1.7] font-normal" href="/#">
+      {/* <Link className="uppercase text-sm leading-[1.7] font-normal" href="/news"> */}
         Yangiliklar
       </Link>
     ),
