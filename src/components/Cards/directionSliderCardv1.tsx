@@ -1,5 +1,3 @@
-import Link from "next/link";
-import MainButton from "../Buttons/mainBtn";
 
 const DirectionSliderCardv1 = ({className, item}: {className?: string, item?: any}) => {
 

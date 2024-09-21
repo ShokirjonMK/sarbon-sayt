@@ -72,7 +72,13 @@ const MainSectionV1 = () => {
                                     <Fade delay={0} direction='up' damping={100}>
                                         <p className="lg:text-[56px] md:text-[46px] text-[32px] leading-[1.1] font-[600]">{currentText?.title}</p>
                                         <p className="md:text-xl text-lg font-[400] md:mt-3 mt-2">{currentText?.description}</p>
-                                        <MainButton title={t("global.submit-application")} type={"light"} isArrow={true} className="w-max max-sm:mx-auto mt-8 mb-10" />
+                                        <MainButton 
+                                            title={t("global.submit-application")} 
+                                            type={"light"} 
+                                            isArrow={true} 
+                                            onClick={() => window ? window.open('https://qabul.sarbon.university', '_blank') : {}}
+                                            className="w-max max-sm:mx-auto mt-8 mb-10"
+                                        />
                                     </Fade>
                                 </div>
                             </div>
