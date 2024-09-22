@@ -21,7 +21,7 @@ const HeaderTop = () => {
                     <div className="flex justify-between items-center">
                         <div className="flex xl:gap-[20px] gap-[15px]">
                             <a href="mailto:info@sarbonuniversity.uz" className="hover:text-white">info@sarbonuniversity.uz</a>
-                            <a href="tel:+998718882288" className="hover:text-white">+998 71 888 22 88</a>|
+                            <a href="tel:+998788882288" className="hover:text-white">+998 78 888 22 88</a>|
                             <a href="#" target="_blank" className="hover:text-white">HEMIS Sarbon</a>
                             <a href="#" target="_blank" className="hover:text-white">HEMIS Student</a>
                         </div>

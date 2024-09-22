@@ -22,7 +22,7 @@ export default function DirectionsView() {
     const item = directions?.find(i => String(i?.id) == router.direction_id)
     setDate(item)
   }, [router.news_id])
-  
+
   return (
     <div>
       <Header isTransparent={false} display="sticky" />
@@ -32,10 +32,10 @@ export default function DirectionsView() {
           <div className="xl:col-span-8 col-span-12">
             <p className="md:text-[32px] text-2xl md:mb-[72px] mb-[64px] font-medium">{data?.sub_title}</p>
             <Image className="w-full" src={data?.img} alt={data?.sub_title} />
-            <p className="mt-4" dangerouslySetInnerHTML={{__html: data?.description}}></p>
+            <p className="mt-4" dangerouslySetInnerHTML={{ __html: data?.description }}></p>
           </div>
           <div className="xl:col-span-4 col-span-12 max-xl:mt-10">
-            <div className="bg-secondBg px-6 py-6 rounded-lg text-[#333]" style={{border: "solid 1px #e9ebeb"}}>
+            <div className="bg-secondBg px-6 py-6 rounded-lg text-[#333]" style={{ border: "solid 1px #e9ebeb" }}>
               <div>
                 <p className="text-primary font-medium text-xl mb-3">Asosiy ma‘lumotlar</p>
                 <p className="text-sm mb-2"><span className="font-medium">Daraja:</span> {data?.degree}</p>
@@ -52,7 +52,6 @@ export default function DirectionsView() {
             </div>
           </div>
         </div>
-
       </div>
       {/* <ApplySection />
       <FAQSection /> */}
