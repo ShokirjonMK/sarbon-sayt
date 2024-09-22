@@ -35,8 +35,8 @@ export default function Directions() {
           </div>
         </div>
       </div>
-      <ApplySection />
-      <FAQSection />
+      {/* <ApplySection />
+      <FAQSection /> */}
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react"
-import useWindowSize from "@/hooks/useWindowSize"
 import MainButton from "./Buttons/mainBtn"
 import { Fade } from "react-awesome-reveal"
 import { useTranslations } from "next-intl"
@@ -14,25 +13,25 @@ import 'swiper/css/effect-fade';
 import { EffectFade, Autoplay } from 'swiper/modules';
 import Image from "next/image"
 
-const slidesData = [
+const slidesData: Array<{title: string, description: string, img: any}> = [
     {
-      title: "SARBON UNIVERSITETI",
-      description: "Birinchi slayd matni",
+      title: "Kelajakni bugundan qur!",
+      description: "Sarbon Universitetida bilim sari qadam qo'ying.",
       img: img1
     },
     {
-      title: "Yangi Universitet",
-      description: "Ikkinchi slayd matni",
+      title: "Innovatsiya va muvaffaqiyat sari birgalikda!",
+      description: "Yangi avlod yetakchilari uchun bilim manbai.",
       img: img2
     },
     {
-      title: "Kelajak Ta'limi",
-      description: "To'rtinchi slayd matni",
+      title: "Sizning orzularingizning manzili!",
+      description: "Sarbon Universiteti: Karyerangizni shu yerda boshlang.",
       img: img3
     },
     {
-        title: "Kelajak Ta'limi",
-        description: "To'rtinchi slayd matni",
+        title: "Global bilim, milliy qadriyatlar!",
+        description: "Zamonaviy ta'lim, an'anaviy qadriyatlar bilan uyg'unlikda.",
         img: img4
       }
 ];
@@ -40,10 +39,7 @@ const slidesData = [
 const MainSectionV1 = () => {
 
     const t = useTranslations();
-    const [currentText, setCurrentText] = useState({
-        title: "SARBON UNIVERSITETI",
-        description: "Birinchi slayd matni"
-    });
+    const [currentText, setCurrentText] = useState<{title: string, description: string}>({title: slidesData[0]?.title, description: slidesData[0]?.description});
     
     const progressCircle = useRef<any>(null);
     const progressContent = useRef<any>(null);
@@ -60,7 +56,7 @@ const MainSectionV1 = () => {
         const slide = slidesData[currentIndex];
         setCurrentText({
           title: slide?.title,
-          description: slide?.description
+          description: slide?.description,
         });
       };
     
@@ -69,30 +65,33 @@ const MainSectionV1 = () => {
     return ( 
             <>
                 <div className="text-white">
-                    <div className="grid grid-cols-2 h-[calc(100vh-228px)]">
-                        <div className="h-full  bg-main-img bg-no-repeat">
-                            <div className="h-full bg-primary/80 w-full flex items-center px-10">
+                    <div className="grid max-lg:grid-cols-1 grid-cols-2 h-[calc(100vh-256px)]">
+                        <div className="h-full bg-main-img bg-no-repeat">
+                            <div className="h-full bg-primary/80 w-full flex items-center sm:px-24 px-6 max-sm:text-center">
                                 <div>
                                     <Fade delay={0} direction='up' damping={100}>
                                         <p className="lg:text-[56px] md:text-[46px] text-[32px] leading-[1.1] font-[600]">{currentText?.title}</p>
-                                        <p className="md:text-xl text-lg font-[400] md:mt-3 mt-2">{currentText?.description}{t("MainSection.title")}</p>
-                                        <MainButton title={t("global.submit-application")} type={"light"} isArrow={true} className="w-max max-md:mx-auto mt-8 mb-10" />
+                                        <p className="md:text-xl text-lg font-[400] md:mt-3 mt-2">{currentText?.description}</p>
+                                        <MainButton 
+                                            title={t("global.submit-application")} 
+                                            type={"light"} 
+                                            isArrow={true} 
+                                            onClick={() => window ? window.open('https://qabul.sarbon.university', '_blank') : {}}
+                                            className="w-max max-sm:mx-auto mt-8 mb-10"
+                                        />
                                     </Fade>
                                 </div>
                             </div>
                         </div>
-                        <div className="h-full">
+                        <div className="h-full max-lg:hidden">
                             <Swiper
-                                spaceBetween={30}
-                                effect={'fade'}
+                                slidesPerView={1}
                                 navigation={true}
+                                effect={'fade'}
                                 loop={true}
                                 autoplay={{
                                     delay: 10000,
                                     disableOnInteraction: false,
-                                }}
-                                pagination={{
-                                    clickable: true,
                                 }}
                                 onSlideChange={handleSlideChange}
                                 onAutoplayTimeLeft={onAutoplayTimeLeft}
@@ -106,15 +105,6 @@ const MainSectionV1 = () => {
                                         </SwiperSlide>
                                     ))
                                 }
-                                {/* <SwiperSlide>
-                                    <img className="h-full w-full object-cover" src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <img className="h-full w-full object-cover" src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <img className="h-full w-full object-cover" src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                </SwiperSlide> */}
                                 <div className="autoplay-progress text-primary" slot="container-end">
                                     <svg className="stroke-primary" viewBox="0 0 48 48" ref={progressCircle}>
                                         <circle cx="24" cy="24" r="20"></circle>

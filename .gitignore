@@ -131,3 +131,5 @@ web_modules/
 .pnp.*
 
 .next/
+
+/docker/nginx/logs

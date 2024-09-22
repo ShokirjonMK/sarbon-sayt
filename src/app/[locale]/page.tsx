@@ -19,6 +19,7 @@ import { Lenta } from "@/components/Lenta";
 import Headerv1 from "@/components/Headerv1";
 import Faculties from "@/components/faculties";
 import MainSectionV1 from "@/components/mainSectionV1";
+import DirectionSectionv1 from "@/components/directionSectionv1";
 
 export default function IndexPage() {
 
@@ -74,7 +75,8 @@ export default function IndexPage() {
       {/* <ReactorsAppeal /> */}
       <AboutSection />
       {/* <Faculties /> */}
-      <DirectionSlider />
+      {/* <DirectionSlider /> */}
+      <DirectionSectionv1 />
       <PartnersSlider />
       {/* <StudentsOtzivSlider /> */}
       <ApplySection />
