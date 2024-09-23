@@ -14,8 +14,6 @@ export default function NewsView() {
   const router = useParams();
   const [data, setDate] = useState<any>()
 
-  console.log("router --", router.news_id);
-
   useEffect(() => {
     const item = news?.find(i => String(i?.id) == router.news_id)
     setDate(item)

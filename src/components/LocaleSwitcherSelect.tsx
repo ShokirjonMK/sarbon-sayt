@@ -31,7 +31,6 @@ export default function LocaleSwitcherSelect({className}: {className?: string}) 
     }
   }
 
-  // console.log("locales", locales);
   
 
   useEffect(() => {
@@ -44,12 +43,8 @@ export default function LocaleSwitcherSelect({className}: {className?: string}) 
       }))
       setitems(arr)      
   }, [locales]);
-  // console.log("pathname", );
   
-  console.log("params", params);
-  console.log("pathname", pathname);
   // // let curPath = (pathname.split('/').slice(2, pathname.split('/').length)).join('/')
-  // console.log("event", event);
 
   function onSelectChangeDrop(event: "uz" | "ru" | "en") {
     

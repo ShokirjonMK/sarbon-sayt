@@ -55,7 +55,6 @@ const menuData = [
   },
 ]
 
-
 const Headerv1: React.FC = (): JSX.Element => {
 
   const { width, height } = useWindowSize();

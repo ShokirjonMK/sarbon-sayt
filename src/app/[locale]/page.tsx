@@ -23,38 +23,36 @@ import DirectionSectionv1 from "@/components/directionSectionv1";
 
 export default function IndexPage() {
 
-  const top = useScrollTop();
-
   return (
     <>
       <DefaultSeo {...SEO} />
       <NextSeo
         title="SARBON UNIVERSITETI"
-        description='"Sarbon Universiteti"da milliy va yevro ya`ni rus tilida ta`lim guruhlari shakllantirilgan! "Sarbon Universiteti" barcha oliy ta`lim imtihonlaridan o`ta olmagan abituriyentlarga so`nggi imkoniyat eshigini ochadi, siz 2023-yil boshidanoq talaba bo`lishingiz mumkin, sentabrdan esa siz to`liq ikkinchi kursga o`tasiz'
-        canonical="https://sarbonuniversity.uz"
+        description='Universitetimiz ko‘plab yo‘nalishlarda dasturlar taklif qiluvchi zamonaviy ta’lim markazi hisoblanadi. Biz zamonaviy dunyo muammolariga tayyor yuqori malakali mutaxassislarni tayyorlashga intilamiz. Universitet o‘qituvchilari o‘z sohalarining ekspertlari bo‘lib, nafaqat ta’lim berishadi, balki talabalarga amaliy ko‘nikmalarni rivojlantirishda yordam berishadi. Biz akademik mobillik va tajriba almashish imkoniyatlarini taqdim etgan holda xalqaro hamkorlikni faol qo‘llab-quvvatlaymiz. Bu yerda har bir talaba sifatli ta’lim va kasbiy o‘sish imkoniyatlarini qo‘lga kiritadi.'
+        canonical="https://sarbon.university"
         openGraph={{
-          url: "https://sarbonuniversity.uz",
-          title: "SARBON UNIVERSITY",
-          description: "SARBON UNIVERSITY",
+          url: "https://sarbon.university",
+          title: "SARBON UNIVERSITETI",
+          description: "SARBON UNIVERSITETI",
           images: [
             {
-              url: "https://sarbonuniversity.uz/thema/img/PU.png",
+              url: "/icon.svg",
               width: 800,
               height: 600,
-              alt: "SARBON UNIVERSITY",
-              type: "image/png",
+              alt: "SARBON UNIVERSITETI",
+              type: "image/svg+xml",
             },
             {
-              url: "https://sarbonuniversity.uz/thema/img/PU.png",
+              url: "/icon.svg",
               width: 900,
               height: 800,
-              alt: "SARBON UNIVERSITY",
-              type: "image/png",
+              alt: "SARBON UNIVERSITETI",
+              type: "image/svg+xml",
             },
-            { url: "https://sarbonuniversity.uz/thema/img/PU.png" },
-            { url: "https://sarbonuniversity.uz/thema/img/PU.png" },
+            { url: "/icon.svg" },
+            { url: "/icon.svg" },
           ],
-          siteName: "SARBON UNIVERSITY",
+          siteName: "SARBON UNIVERSITETI",
         }}
       />
       <div className="main-section">

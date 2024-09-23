@@ -1,11 +1,11 @@
 export default {
-    title: 'Sarbon Universiteti - Sarbon Universiteti"da milliy va yevro ya`ni rus tilida ta`lim guruhlari shakllantirilgan! "Sarbon Universiteti" barcha oliy ta`lim imtihonlaridan o`ta olmagan abituriyentlarga so`nggi imkoniyat eshigini ochadi, siz 2023-yil boshidanoq talaba bo`lishingiz mumkin, sentabrdan esa siz to`liq ikkinchi kursga o`tasiz',
-    description: 'Sarbon Universiteti"da milliy va yevro ya`ni rus tilida ta`lim guruhlari shakllantirilgan! "Sarbon Universiteti" barcha oliy ta`lim imtihonlaridan o`ta olmagan abituriyentlarga so`nggi imkoniyat eshigini ochadi, siz 2023-yil boshidanoq talaba bo`lishingiz mumkin, sentabrdan esa siz to`liq ikkinchi kursga o`tasiz',
+    title: "Sarbon Universiteti",
+    description: "Sarbon Universiteti - Innovatsion ta'lim: Zamonaviy pedagogik texnologiyalar va metodologiyalarni joriy etish, talabalarni real hayotdagi muammolarni hal qilishga tayyorlash",
     openGraph: {
       type: 'website',
       locale: 'uz_UZ',
-      url: 'https://sarbonuniversity.uz/',
-      site_name: 'Sarbon Universiteti',
+      url: 'https://sarbon.university',
+      site_name: 'SARBON UNIVERSITETI',
     },
     twitter: {
       handle: '@sarbonuniv',

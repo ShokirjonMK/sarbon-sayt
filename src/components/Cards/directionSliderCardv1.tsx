@@ -12,7 +12,7 @@ const DirectionSliderCardv1 = ({className, item}: {className?: string, item?: an
                         {
                             item?.prices?.kunduzgi ? 
                             <div className="flex justify-between">
-                                <p>Kuzduzgi</p>
+                                <p>Kunduzgi</p>
                                 <p>{item?.prices?.kunduzgi} / yil</p>
                             </div> : ""
                         }
@@ -26,7 +26,7 @@ const DirectionSliderCardv1 = ({className, item}: {className?: string, item?: an
                         {
                             item?.prices?.kechki ? 
                             <div className="flex justify-between">
-                                <p>Kechgi</p>
+                                <p>Kechki</p>
                                 <p>{item?.prices?.kechki} / yil</p>
                             </div> : ""
                         }

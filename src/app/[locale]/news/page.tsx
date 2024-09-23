@@ -3,7 +3,7 @@
 import TopIntroComponent from "@/components/topIntroComponent";
 import Image from "next/image";
 import pattern from '@/assets/images/directions-pattern.png';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NewsCard from "@/components/Cards/NewsCard";
 import { news } from "@/datas/news";
 import Link from "next/link";
@@ -15,13 +15,6 @@ export default function News() {
   const [type, setType] = useState<string>("news");
   const router = useRouter();
   const pathname = usePathname();
-
-  const [activeBtn, setactiveBtn] = useState<number | string>('about-university')
-
-  useEffect(() => {
-    console.log("pathname", pathname);
-
-  }, []);
 
   const changeMenu = (e: string) => {
     setType(e)
