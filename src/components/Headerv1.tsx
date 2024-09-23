@@ -28,24 +28,24 @@ const menuData = [
     key: '3',
     label: <Link href="#" className='uppercase font-semibold text-[18px] flex items-center' >Tarkibiy bolinma</Link>,
     children: [
-      { key: '13', label: <Link href="/management" className='uppercase font-semibold text-[18px] flex items-center' >Rahbariyat</Link> },
-      { key: '14', label: <Link href="/departments" className='uppercase font-semibold text-[18px] flex items-center' >Bo'limlar</Link> },
-      { key: '15', label: <Link href="/kafedra" className='uppercase font-semibold text-[18px] flex items-center' >Kafedralar</Link> },
+      { key: '13', label: <Link href="/" className='uppercase font-semibold text-[18px] flex items-center' >Rahbariyat</Link> },
+      { key: '14', label: <Link href="/" className='uppercase font-semibold text-[18px] flex items-center' >Bo'limlar</Link> },
+      { key: '15', label: <Link href="/" className='uppercase font-semibold text-[18px] flex items-center' >Kafedralar</Link> },
     ],
   },
   {
     key: '4',
-    label: <Link href="/#" className='uppercase font-semibold text-[18px] flex items-center' >Yangiliklar</Link>,
+    label: <Link href="/" className='uppercase font-semibold text-[18px] flex items-center' >Yangiliklar</Link>,
   },
   {
     key: '5',
-    label: <Link href="/vacancy" className='uppercase font-semibold text-[18px] flex items-center' >Vakantlar</Link>,
+    label: <Link href="/" className='uppercase font-semibold text-[18px] flex items-center' >Vakantlar</Link>,
   },
   {
     key: '6',
-    label: <Link href="#" className='uppercase font-semibold text-[18px] flex items-center' >Qabul</Link>,
+    label: <Link href="https://qabul.sarbon.university/" className='uppercase font-semibold text-[18px] flex items-center' >Qabul</Link>,
     children: [
-      { key: '16', label: <Link href="/admission" className='uppercase font-semibold text-[18px] flex items-center' >Qabul 2024</Link> },
+      { key: '16', label: <Link href="/#" className='uppercase font-semibold text-[18px] flex items-center' >Qabul 2024</Link> },
     ],
   },
   {
@@ -98,7 +98,7 @@ const Headerv1: React.FC = (): JSX.Element => {
         <div className="hidden md:flex gap-6">
           <div className="text-end">
             <p className='opacity-60' >Contact center</p>
-            <h2 className="text-[20px] font-bold" ><a href="tel:+998718882288">+998 71 888 22 88</a></h2>
+            <h2 className="text-[20px] font-bold" ><a href="tel:+998788882288">+998 78 888 22 88</a></h2>
           </div>
           <MainButton
             title={t("global.acceptance")}
@@ -161,7 +161,7 @@ const Headerv1: React.FC = (): JSX.Element => {
               {t("global.news")}
             </Link>
             <Link href={"/#"} className={`uppercase font-semibold text-[18px]`}>
-            Vakansiyalar
+              Vakansiyalar
             </Link>
             {/* <Dropdown menu={{ items: newsMenus }}>
               <Link

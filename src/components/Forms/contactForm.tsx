@@ -65,10 +65,10 @@ const ContactForm = () => {
             Telefon:
           </p>
           <a
-            href="tel:+998718882288"
+            href="tel:+998788882288"
             className="md:text-[32px] text-[24px] font-bold leading-[1.2] my-1 hover:text-secondPrimary transition-all"
           >
-            +998 71 888 22 88
+            +998 78 888 22 88
           </a>
           <p className="text-[rgba(51,51,51,0.8)] font-normal text-base">
             HOZIROQ QO‘NG‘IROQ QILING!
@@ -89,7 +89,7 @@ const ContactForm = () => {
             href="#"
             className="text-base font-semibold leading-[1.4] mt-1 hover:text-secondPrimary transition-all"
           >
-            Toshkent shahri, Olmazor tumani, Sag'bon ko`chasi 2B-uy
+            Toshkent shahri, Olmazor tumani, Sag'bon ko`chasi 290
           </a>
         </div>
       </div>
