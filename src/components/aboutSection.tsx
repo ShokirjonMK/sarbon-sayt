@@ -1,4 +1,5 @@
-import UniversityImage from '../assets/images/about-section.jpg'
+// import UniversityImage from '../assets/images/about-section.jpg'
+import UniversityImage from '@/assets/images/main-2.jpg'
 import Image from "next/image"
 import MainButton from './Buttons/mainBtn';
 // @ts-ignore

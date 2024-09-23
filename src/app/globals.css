@@ -21,7 +21,8 @@
 }
 
 .bg-main-img{
-  background: url(../assets/images/main.jpg);
+  background: url(../assets/images/main-3.JPG);
+  background-position: right;
   background-size: cover;
 }
 
